@@ -29,7 +29,7 @@ const App = () => {
             return (
               <BottomNavigationAction
                 showLabel
-                label={`model ${index+1}`}
+                label={`model ${index + 1}`}
                 icon={<Restore />}
                 onClick={() =>
                   onSelectModel(
@@ -40,12 +40,13 @@ const App = () => {
               />
             );
           })}
-          <BottomNavigationAction
-            showLabel
-            label="View AR"
-            icon={<AddAPhoto />}
-            slot="ar-button"
-          />
+          <button slot="ar-button">
+            <BottomNavigationAction
+              showLabel
+              label="View AR"
+              icon={<AddAPhoto />}
+            />
+          </button>
         </BottomNavigation>
       </model-viewer>
     </Fragment>
