@@ -22,13 +22,14 @@ const App = () => {
         ios-src={modelUSDZ} // AR iOS
         auto-rotate
         camera-controls
-        style={{ width: "100%", height: "800px" }}
+        style={{ width: "100vw", height: "90vh" }}
       >
         <BottomNavigation>
           {jsonMock.linksGLB.map((link, index) => {
             return (
               <BottomNavigationAction
-                showLabel
+                key={index}
+                showLabel={true}
                 label={`model ${index + 1}`}
                 icon={<Restore />}
                 onClick={() =>
@@ -40,13 +41,13 @@ const App = () => {
               />
             );
           })}
-          <button slot="ar-button">
+          {/* <button slot="ar-button">
             <BottomNavigationAction
-              showLabel
+              showLabel={true}
               label="View AR"
               icon={<AddAPhoto />}
             />
-          </button>
+          </button> */}
         </BottomNavigation>
       </model-viewer>
     </Fragment>
