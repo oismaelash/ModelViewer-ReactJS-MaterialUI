@@ -28,14 +28,21 @@ const App = () => {
           {jsonMock.linksGLB.map((link, index) => {
             return (
               <BottomNavigationAction
-                label="Recents"
+                showLabel
+                label={`model ${index+1}`}
                 icon={<Restore />}
-                onClick={() => onSelectModel(jsonMock.linksGLB[index], jsonMock.linksUSDZ[index])}
+                onClick={() =>
+                  onSelectModel(
+                    jsonMock.linksGLB[index],
+                    jsonMock.linksUSDZ[index]
+                  )
+                }
               />
             );
           })}
           <BottomNavigationAction
-            label="Recents"
+            showLabel
+            label="View AR"
             icon={<AddAPhoto />}
             slot="ar-button"
           />
