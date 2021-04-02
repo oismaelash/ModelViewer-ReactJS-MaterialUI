@@ -16,6 +16,8 @@ const App = () => {
   return (
     <Fragment>
       <model-viewer
+        ar
+        modes="scene-viewer quick-look webxr"
         src={modelGLB} // AR Android/Web
         ios-src={modelUSDZ} // AR iOS
         auto-rotate
