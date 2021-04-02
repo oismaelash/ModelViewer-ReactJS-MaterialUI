@@ -2,32 +2,33 @@ import { Fragment, useState } from "react";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import { Restore, AddAPhoto } from "@material-ui/icons";
-import { LinksModels } from "./assets/mockData";
+import { jsonMock } from "./assets/mockData";
 
 const App = () => {
-  const [modelSelected, setModelSelected] = useState(LinksModels[0]);
+  const [modelGLB, setModelGLB] = useState(jsonMock.linksGLB[0]);
+  const [modelUSDZ, setModelUSDZ] = useState(jsonMock.linksUSDZ[0]);
 
-  const onSelectModel = (linkModelSelected) => {
-    console.log(linkModelSelected);
-    setModelSelected(linkModelSelected);
+  const onSelectModel = (glb, usdz) => {
+    setModelGLB(glb);
+    setModelUSDZ(usdz);
   };
 
   return (
     <Fragment>
       <model-viewer
-        src={modelSelected} // AR Android/Web
-        // ios-src='' // AR iOS
+        src={modelGLB} // AR Android/Web
+        ios-src={modelUSDZ} // AR iOS
         auto-rotate
         camera-controls
         style={{ width: "100%", height: "800px" }}
       >
         <BottomNavigation>
-          {LinksModels.map((link) => {
+          {jsonMock.linksGLB.map((link, index) => {
             return (
               <BottomNavigationAction
                 label="Recents"
                 icon={<Restore />}
-                onClick={() => onSelectModel(link)}
+                onClick={() => onSelectModel(jsonMock.linksGLB[index], jsonMock.linksUSDZ[index])}
               />
             );
           })}
