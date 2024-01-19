@@ -1,13 +1,11 @@
 export const jsonMock = {
   linksGLB: [
-    "https://s3.amazonaws.com/modelviwer.dev/models-3d/Astronaut+(1).glb",
-    "https://s3.amazonaws.com/modelviwer.dev/models-3d/bebe01.glb",
-    "https://s3.amazonaws.com/modelviwer.dev/models-3d/Arteria.glb",
+    "https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb",
+    "https://modelviewer.dev/shared-assets/models/Astronaut.glb"
   ],
   linksUSDZ: [
-    "https://s3.amazonaws.com/modelviwer.dev/models-3d/Astronaut+(1).usdz",
-    "https://s3.amazonaws.com/modelviwer.dev/models-3d/bebe01.usdz",
-    "https://s3.amazonaws.com/modelviwer.dev/models-3d/Arteria.usdz",
+    "https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.usdz",
+    "https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
   ],
   icons: ["AcUnit", "AccessAlarm", "AddCircle"],
 };
